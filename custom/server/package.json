@@ -17,6 +17,7 @@
     "winston": "^3.10.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.14",
     "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.17",
     "@types/mongoose": "^5.11.97",
