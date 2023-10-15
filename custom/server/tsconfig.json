@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
 	"baseUrl": "./",
-	"outDir": "./dist/out-tsc",
+	"outDir": "./out",
 	"forceConsistentCasingInFileNames": true,
 	"strict": true,
 	"noImplicitReturns": true,

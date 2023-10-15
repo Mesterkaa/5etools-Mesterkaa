@@ -1,6 +1,6 @@
 import {logger} from "./logger";
 import * as dotenv from "dotenv";
-dotenv.config();
+dotenv.config({ path: "./custom/server/.env"});
 
 export const MONGODB_URI = process.env["MONGODB_URI"];
 
