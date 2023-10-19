@@ -2,8 +2,6 @@
 const baseUrl = `${window.location.protocol}//${window.location.host}`;
 const ClientId = "Ak-Id";
 
-console["HEJ"]("HEJ")
-
 const _VALUE = "Value";
 const _KEY = "Key";
 const _COUNT = "Count";
