@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
 	"baseUrl": "./",
-	"outDir": "./dist/out-tsc",
+	"outDir": "./out",
 	"forceConsistentCasingInFileNames": true,
 	"strict": true,
 	"noImplicitReturns": true,
@@ -14,7 +14,7 @@
 	"moduleResolution": "node",
 	"importHelpers": true,
 	"target": "es2017",
-	"module": "CommonJS",
+	"module": "commonjs",
 	"lib": [
 	  "es2018",
 	  "dom"
