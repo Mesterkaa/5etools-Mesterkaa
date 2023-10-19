@@ -6,6 +6,8 @@ node_modules
 .idea/
 *.iml
 
+custom/server/out
+
 # Misc dev/scripting files
 trash
 trash_in
