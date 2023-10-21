@@ -1,4 +1,4 @@
-import {logger} from "./logger";
+import {logger} from "./logger.js";
 import * as dotenv from "dotenv";
 dotenv.config({ path: "./custom/server/.env"});
 

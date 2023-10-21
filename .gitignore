@@ -1,12 +1,14 @@
 desktop.ini
 node_modules
 
+# Compiled Typescript
+dist
+out
 
 # IntelliJ project files
 .idea/
 *.iml
 
-custom/server/out
 
 # Misc dev/scripting files
 trash

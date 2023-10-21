@@ -10,7 +10,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/custom/server/index.ts",
 				"preLaunchTask": "tsc: build - custom/server/tsconfig.json",
-				"outFiles": ["${workspaceFolder}/custom/server/out/**/*.js"],
+				"outFiles": ["${workspaceFolder}/dist/**/*.js"],
 				"outputCapture": "std"
         }
     ]

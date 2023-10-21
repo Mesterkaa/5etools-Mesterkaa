@@ -1,12 +1,13 @@
 {
-	"name": "5etools",
-	"author": "TheGiddyLimit",
-	"version": "1.185.1",
+	"name": "5etools.Mesterkaa.dk",
+	"author": "Mesterkaa",
+	"version": "1.0.0",
 	"license": "MIT",
 	"description": "A site dedicated to making playing games with your friends as easy as possible.",
 	"type": "module",
 	"private": true,
 	"scripts": {
+		"build:server": "cd custom/server $$ tsc",
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen": "node node/generate-all.js",
 		"gen:search-index": "node node/generate-search-index.js",
@@ -41,9 +42,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/5etools-mirror-1/5etools-mirror-1.github.io.git"
+		"url": "git+https://github.com/Mesterkaa/5etools-Mesterkaa.git"
 	},
 	"devDependencies": {
+		"@types/cors": "^2.8.15",
+		"@types/dotenv": "^8.2.0",
+		"@types/express": "^4.17.20",
+		"@types/mongoose": "^5.11.97",
+		"@types/node": "^20.8.7",
+		"@types/winston": "^2.4.4",
 		"5etools-utils": "^0.9.10",
 		"ajv": "^8.11.2",
 		"ajv-formats": "^2.1.1",
@@ -60,15 +67,21 @@
 		"stylelint": "^13.13.1",
 		"stylelint-config-sass-guidelines": "^8.0.0",
 		"terser": "^5.15.1",
+		"typescript": "^5.2.2",
 		"workbox-cli": "^6.5.3"
 	},
-	"bugs": {
-		"url": "https://github.com/5etools-mirror-1/5etools-mirror-1.github.io/issues"
-	},
-	"homepage": "https://github.com/5etools-mirror-1/5etools-mirror-1.github.io#readme",
 	"main": ".eslintrc.js",
 	"directories": {
 		"lib": "lib",
 		"test": "test"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"mongoose": "^7.6.3",
+		"node": "^21.0.0",
+		"tslib": "^2.6.2",
+		"winston": "^3.11.0"
 	}
 }
