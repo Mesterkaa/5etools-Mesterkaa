@@ -13,7 +13,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '21.x'
+      - name: Make envFile
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_PORT: ${{ vars.PORT }}
+          envkey_MONGODB_ADDRESS: ${{ secrets.MONGODB_ADDRESS }}
+          envkey_MONGODB_USER_ID: ${{ secrets.MONGODB_USER_ID }}
+          envkey_MONGODB_USER_SECRET: ${{ secrets.MONGODB_USER_SECRET }}
+          file_name: .env
       - name: Deploy Server Code
         run: |
           npm install
           npm run build:server
+          pm2 restart ${{ vars.PM2_NAME }}
