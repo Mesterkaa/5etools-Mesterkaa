@@ -1,4 +1,4 @@
-import winston = require('winston');
+import winston from "winston"
 
 export var logger = winston.createLogger({
     level: 'info',

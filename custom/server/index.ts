@@ -1,12 +1,11 @@
 import express from 'express';
 import * as http from 'http';
 import cors from 'cors';
+import mongoose from 'mongoose';
 
-const mongoose = require('mongoose');
-
-import {logger} from "./config/logger"
-import { MONGODB_URI, PORT } from "./config/secrets";
-import { IServerStorage, ServerStorage } from './ServerStorage';
+import { logger } from "./config/logger.js"
+import { MONGODB_URI, PORT } from "./config/secrets.js";
+import { IServerStorage, ServerStorage } from './ServerStorage.js';
 
 class Server {
 
@@ -22,7 +21,7 @@ class Server {
 	}
 
 	private routes(): void{
-		this.app.use(express.static(__dirname + "/../../../"))
+		this.app.use("/", express.static("."))
 		//this.app.use("/libs", express.static(__dirname + "/../../../"))
 
 		//Removes every key from the database
