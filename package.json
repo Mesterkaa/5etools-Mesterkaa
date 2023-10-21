@@ -7,7 +7,7 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"build:server": "cd custom/server $$ tsc",
+		"build:server": "cd ./custom/server && tsc",
 		"version-bump": "npm version -m \"chore(version): bump\"",
 		"gen": "node node/generate-all.js",
 		"gen:search-index": "node node/generate-search-index.js",
