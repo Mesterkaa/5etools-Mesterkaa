@@ -24,6 +24,14 @@ class Server {
 		this.app.use("/", express.static("."))
 		//this.app.use("/libs", express.static(__dirname + "/../../../"))
 
+		//
+		this.app.get("/storage/distinctIds", async (req, res) => {
+
+			const Ids = await ServerStorage.distinct('ClientId')
+
+			res.status(Ids.length == 0 ? 204 : 200).send(Ids);
+		});
+
 		//Removes every key from the database
 		this.app.delete("/storage/:id/clear", async (req, res) => {
 			const id = req.params.id;

@@ -1,6 +1,13 @@
 "use strict";
+
+const ClientId = localStorage.getItem("ClientId");
+console.log(`Current clientid: ${ClientId}`);
+if (ClientId == null && window.location.pathname != '/username.html') {
+	window.location = 'username.html';
+}
+
+
 const baseUrl = `${window.location.protocol}//${window.location.host}`;
-const ClientId = "Ak-Id";
 
 const _VALUE = "Value";
 const _KEY = "Key";

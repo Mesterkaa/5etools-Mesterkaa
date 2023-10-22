@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--5ETOOLS_CMP-->
+	<!--5ETOOLS_ANALYTICS-->
+
+	<meta charset="utf-8">
+	<meta name="description" content="A suite of browser-based tools for 5th Edition  Dungeons &amp; Dragons players and Dungeon Masters.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>5etools</title>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Favicons -->
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="icon" type="image/png" sizes="256x256" href="favicon-256x256.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="favicon-144x144.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+	<!-- Chrome Web App Icons -->
+	<link rel="manifest" href="manifest.webmanifest">
+	<meta name="application-name" content="5etools">
+	<meta name="theme-color" content="#006bc4">
+
+	<!-- Windows Start Menu tiles -->
+	<meta name="msapplication-config" content="browserconfig.xml"/>
+	<meta name="msapplication-TileColor" content="#006bc4">
+
+	<!-- Apple Touch Icons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="360x360" href="apple-touch-icon-360x360.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+	<meta name="apple-mobile-web-app-title" content="5etools">
+
+	<!-- macOS Safari Pinned Tab and Touch Bar -->
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#006bc4">
+
+	<!-- OpenSearch -->
+	<link rel="search" href="open-search.xml" title="Search 5etools" type="application/opensearchdescription+xml">
+
+	<!--
+	<script type="text/javascript" src="sw-injector.js"></script>
+	-->
+
+
+	<script type="text/javascript" src="js/styleswitch.js"></script>
+	<script type="text/javascript" src="js/browsercheck.js"></script>
+
+	<style>
+		table.home-table {
+			padding: 0 10px 10px;
+		}
+
+		table.home-table td {
+			vertical-align: top;
+			padding: 0 5px;
+			width: 50%;
+		}
+
+		#don-wrapper {
+			position: relative;
+			margin-bottom: 7px;
+			padding: 5px 15px;
+		}
+
+		.home__btn-page {
+			border-width: 2px;
+			width: 134px;
+			height: 110px;
+			text-align: center;
+			flex-shrink: 0;
+			padding: 6px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border-radius: 0;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			.home__btn-page {
+				width: 113px;
+			}
+		}
+
+		.home__btn-page,
+		.home__btn-page:hover,
+		.home__btn-page:active,
+		.home__btn-page:focus {
+			color: #444;
+		}
+
+		.night-mode .home__btn-page,
+		.night-mode .home__btn-page:hover,
+		.night-mode .home__btn-page:active,
+		.night-mode .home__btn-page:focus {
+			color: inherit;
+		}
+
+		.home__icn-page {
+			font-size: 50px;
+			height: 50px;
+			width: 65px;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.home__lbl-page {
+			height: 34px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 0;
+			font-size: 17px;
+			color: #333;
+		}
+
+		.home__h-player {
+			text-decoration: underline;
+			text-decoration-color: dodgerblue;
+		}
+
+		.home__h-rule {
+			text-decoration: underline;
+			text-decoration-color: #33a5a5;
+		}
+
+		.home__h-dm {
+			text-decoration: underline;
+			text-decoration-color: darkviolet;
+		}
+
+		.home__btn-player,
+		.home__btn-player:hover,
+		.home__btn-player:active,
+		.home__btn-player:focus,
+		.night-mode .home__btn-player,
+		.night-mode .home__btn-player:hover,
+		.night-mode .home__btn-player:active,
+		.night-mode .home__btn-player:focus {
+			border-color: dodgerblue;
+			color: dodgerblue;
+		}
+
+		.home__btn-rule,
+		.home__btn-rule:hover,
+		.home__btn-rule:active,
+		.home__btn-rule:focus,
+		.night-mode .home__btn-rule,
+		.night-mode .home__btn-rule:hover,
+		.night-mode .home__btn-rule:active,
+		.night-mode .home__btn-rule:focus{
+			border-color: #33a5a5;
+			color: #33a5a5;
+		}
+
+		.home__btn-dm,
+		.home__btn-dm:hover,
+		.home__btn-dm:active,
+		.home__btn-dm:focus,
+		.night-mode .home__btn-dm,
+		.night-mode .home__btn-dm:hover,
+		.night-mode .home__btn-dm:active,
+		.night-mode .home__btn-dm:focus {
+			border-color: darkviolet;
+			color: darkviolet;
+		}
+
+		.home__stripe {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 55px;
+		}
+
+		.home__stripe-header {
+			font-size: 32px;
+			font-weight: bold;
+			position: absolute;
+			top: -50px;
+			left: 0;
+			right: 0;
+		}
+
+		.home__split {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.home__split-spaced {
+			margin-right: 80px;
+		}
+
+		.home__split-spaced--gutter {
+			margin-right: 10px;
+		}
+
+		.home__wrp-buttons {
+			justify-content: center;
+		}
+
+		.home__mobile-visible {
+			display: none;
+		}
+
+		.home__narrow-visible {
+			display: none;
+		}
+
+		@media (max-width: 991px) {
+			.home__split {
+				flex-direction: column;
+			}
+
+			.home__split > * {
+				margin-bottom: 45px;
+			}
+
+			.home__split-spaced {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+
+			.home__split-spaced--no-header {
+				margin-bottom: 0;
+			}
+
+			.home__stripe-header {
+				right: 0;
+				left: 0;
+				top: -40px;
+			}
+
+			.home__mobile-visible {
+				display: block;
+			}
+
+			.home__icn-page {
+				font-size: 50px;
+				height: 50px;
+			}
+
+			.home__btn-page {
+				height: 114px;
+				margin: 5px !important;
+			}
+
+			.home__mobile-hidden {
+				display: none !important;
+			}
+		}
+
+		@media (max-width: 507px) {
+			.home__narrow-visible {
+				display: block !important;
+			}
+
+			.home__narrow-hidden {
+				display: none !important;
+			}
+
+			.home__split-spaced--no-header {
+				margin-bottom: 15px;
+			}
+		}
+
+		[id="div-gpt-ad-5etools35927"]::after,
+		[id="div-gpt-ad-5etools35930"]::after {
+			content: '';
+			margin: 20px auto 0;
+			width: 100%;
+			display: block;
+		}
+	</style>
+	<style>
+		tr.currentRow {
+			background-color: rgb(255 255 0 / 47%);
+			border-radius: 25px;
+		}
+	</style>
+</head>
+<body>
+<header class="hidden-xs hidden-sm page__header">
+	<div class="container ve-flex-v-baseline">
+		<h1 class="page__title no-wrap my-0 page__title no-wrap my-0--home">5e<span>tools</span></h1>
+		<p class="page__subtitle no-wrap my-0" id="page__subtitle">A suite of tools for 5th Edition  Dungeons &amp; Dragons players and Dungeon Masters. <b>Unoffical copy deployed to 5etools.mesterkaa.dk</b></span></p>
+	</div>
+</header>
+<main class="container">
+
+	<div class="w-100">
+		<h3 id="currentUsername">Username needed to continue</h3>
+		<p>Select one of the existing Usernames, or type a new one</p>
+		<table >
+			<tbody id="usernameTable">
+				<tr>
+					<td><input type="text" class="username"></td>
+					<td><button type="button" class="selectButton">Select</button></td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+</main>
+<!--5ETOOLS_SCRIPT_ANCHOR-->
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="custom/client-id.js"></script>
+</body>
+</html>
