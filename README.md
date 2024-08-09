@@ -1,6 +1,6 @@
 # 5e.tools
 
-This is my fork of the main 5e.tools, running on a local machine.
+This is my fork of the now outdated fork: https://github.com/mattlogic6/mallen5e.github.io, running on a local machine.
 Wanting to be able to cloud save instead of local save.
 Probaly going to use a driver for localForage that connects to a mongodb
 
